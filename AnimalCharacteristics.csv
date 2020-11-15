@@ -1,0 +1,15 @@
+;Type;Size;Domestic;Carnivore
+Eagle;bird;big;wild;yes
+Canary;bird;small;both;no
+Horse;mamal;big;both;no
+House cat;mamal;medium;Domestic;yes
+Puma;mamal;medium;wild;yes
+Rat;mamal;small;both;maybe
+Chihuahua;mamal;small;Domestic;no
+Lizard;reptile;small;both;no
+Koala;mamal;medium;wild;no
+Lion;mamal;big;wild;yes
+Wild Cat;mamal;medium;wild;yes
+German Shepherd;mamal;medium;Domestic;maybe
+Snake;reptile;medium;both;yes
+Frog;reptile;small;wild;no
