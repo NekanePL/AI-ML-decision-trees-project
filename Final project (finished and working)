@@ -1,0 +1,36 @@
+#code change
+import numpy as np
+import pandas as pd
+#from sklearn.datasets import dataset()
+from sklearn.tree import DecisionTreeClassifier
+# to load the data you first need to upload the file to your google drive, then make sure to make it public to anyone and get the sareable link
+url='https://drive.google.com/file/d/1B9ANa8rBuFUWN6keCVoVIhB2wNwWSiVj/view?usp=sharing'  #this is the file URL I copied from the file on drive once made public access
+path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2] #this is a way to download it from google drive as a file and not as a web page.
+df = pd.read_csv(path)
+
+#df = pd.read_excel ('C:\Users\Nekane\Desktop\dataset.xlsx')
+print (df)
+
+url='https://drive.google.com/file/d/1hG6l_k1lVHSVRSzJT9A1dS8enWsFZ7tV/view?usp=sharing'
+path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2] #this is a way to download it from google drive as a file and not as a web page.
+df2 = pd.read_csv(path)
+df2
+
+from sklearn import tree
+
+
+X = df2[["Size in cm", "Weight in kg"]]
+#much better now, but you need to access the dataframe keys in this way X = df["Size in cm", "Weight in kg"]
+
+
+y = pd.Categorical(df2.Class).codes
+y
+tree_clf = tree.DecisionTreeClassifier()
+tree_clf.fit(X, y)
+
+tree_clf.predict([[0.001,0.006]])
+
+tree_clf.predict([[0.001,0.006]])
+
+tree.plot_tree(tree_clf)
+                       
